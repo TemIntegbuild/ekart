@@ -91,3 +91,19 @@ then u have to everytime add the file that has been modified
 
 NOTE: the branch from which u are creating new branches, will have all the files already stored on that old branch
 	eg if u are creating b21 branch FROM b1 branch, then all the files in b1 branch will automatically come in b21 branch
+	
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+						EVERYTIME STEPS
+						
+git init
+git remote -v
+git remote add origin https://github.com/orezl/ekart
+git pull --rebase origin master
+
+
+git status
+git add .
+git commit -m "files needed"
+
+git push origin master
