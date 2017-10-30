@@ -1,0 +1,93 @@
+git --version                                                 	 	to check the version
+
+git init								to make that particular folder as your local repository
+
+git remote add origin https://github.com/orezl/ekart			to link your remote repository. 
+									Here, 'origin' is optional. it is the local name of for your remote repository
+									you can use any name for this.
+									e.g.  git remote add khanna https://github.com/orezl/Projects	
+
+git remote -v								to view the remote repositories linked to your local repository	
+									this will display two files for each linked remote repository.
+									one will end up with 'fetch' and other will end up with 'push'	
+
+git remote remove origin						to remove the link between local and remote repositories
+									Here, 'origin' is optional. it is the local name of for your remote repository
+									you can use any name for this.
+									e.g.  git remote remove khanna 	
+
+git status								to view the status of files
+									
+									process:  create file-> save            unstaged, red in color
+										  stage the file		staged, green in color
+
+git add prac.txt							to stage the prac.txt file
+git add .  or  git add --all						to stage all the files
+									
+									NOTE: staging means indexing the file
+
+git rm --cached prac.txt						to remove the staging of the file
+
+git commit -m "message to be shown"					to commit the staged files. this is commiting the files in local repo only.
+									files are not yet pushed to remote repo. 
+									But the time for commit will be same as this , on the remote repo
+									message can be same for many commits
+
+git log									to view the all the commits
+									username, user id are shown as author
+									complete commiting date is shown
+									message is shown
+									
+git push origin master							this is done to push all the commited files to remote repo
+									Here, 'origin' is optional. it is the local name of for your remote repository
+									you can use any name for this.
+									e.g.  git push khanna master 	
+
+git branch b1								creating branch with name b1
+git branch								to view all branches 
+									branch with * and in 'green color' is your current branch
+git checkout b1								to move tO the branch named as b1
+git checkout -b b2							to create branch b2 and simultaneously move to that branch
+
+git merge b2								it will merge all the files in b2 branch with the current branch
+									in this case current branch is b1
+
+git clone ssh or http path 						this will download and unzip all the files of the repository on your local system
+									but the branches will be removed
+									only the files of master branch will be cloned to ur system
+
+
+
+git pull --rebase origin master
+git push origin master
+
+
+
+
+
+Configuring the user ID and user Email of committer. this is done to add the author to the commiting process
+
+git config --global user.name "orezl"
+git config --global user.email "rahulkhanna2910@gmail.com"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.gitignore   named text file is created with type all files. In this file the names of all those files, which u dont want to stage or put on 
+remote repository, is enterd. 
+this file is to be staged after adding names of all the ignore files in it
+
+fork is use to copying someone else's repository in your repository. 
+the changes done before the forking will only be available. 
+changes done after forking will not be availabe in ur repository
+
+pull requests are created by the some else user, who has forked our repository.
+if he has done any changes in that repository and want us to update the our repo, in that case he starts a pull request
+we can view the changes created by him and by clicking on merge button  we can merge the changes ,done by some other user, in our repo
+
+
+NOTE: if any changes are made in the file and u want that changes to be located on remote repository,
+then u have to everytime add the file that has been modified 
+
+
+NOTE: the branch from which u are creating new branches, will have all the files already stored on that old branch
+	eg if u are creating b21 branch FROM b1 branch, then all the files in b1 branch will automatically come in b21 branch
